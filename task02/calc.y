@@ -8,8 +8,8 @@ program:
   ;
 expr:
   mult_expr { $$ = $1; }
-  | mult_expr '+' expr { $$ = $1 + $3; }
-  | mult_expr '-' expr { $$ = $1 - $3; }
+  | expr '+' mult_expr { $$ = $1 + $3; }
+  | expr '-' mult_expr { $$ = $1 - $3; }
   ;
 mult_expr:
   Integer { $$ = $1; }
