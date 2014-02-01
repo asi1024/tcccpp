@@ -5,12 +5,12 @@
 digit [0-9]
 %%
 {digit}+ {
-           yylval = atoi(yytext);
-           return Integer;
-         }
-"+"|"*"  {
-           return *yytext;
-         }
+  yylval = atoi(yytext);
+  return Integer;
+}
+"+"|"-"|"*" {
+  return *yytext;
+}
 [ \t\n]  ; /* スペース，タブ，改行は無視 */
-.        yyerror("Error: invalid character");
+.  yyerror("Error: invalid character");
 %%
