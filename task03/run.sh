@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bison -d -v calc.y
+bison -d -v tcc.y
