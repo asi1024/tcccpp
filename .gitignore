@@ -3,4 +3,5 @@
 *.tab.h
 
 calc
+tcc
 *.output
