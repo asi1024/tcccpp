@@ -1,7 +1,7 @@
 %{
 #include <stdio.h>
 %}
-%define parse.error verbose
+//%define parse.error verbose
 %token Integer Identifier
 
 %%
